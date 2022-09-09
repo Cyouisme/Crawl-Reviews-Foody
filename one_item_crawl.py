@@ -15,7 +15,7 @@ import time
 import random
 import csv
 import os
-from Var import *
+from var import *
 from time import sleep
 from tqdm import tqdm
 from dotenv import load_dotenv

@@ -2,25 +2,11 @@
 # 08/20/2022
 # -*-encoding:utf-8-*-
 
-"""
-Create variables in Var.py before run code
-
-EMAIL = ""
-PASS = ""
-NUM_ITEM = 20
-NUM_FIRST_PAGE = 37
-# URL = "https://www.foody.vn/binh-dinh/nha-hang?CategoryGroup=food&c=nha-hang"
-URL = "https://www.foody.vn/binh-dinh/food/dia-diem?q="
-HEADER = [' ','Review', 'nha_hang']
-PATH_SAVE = 'data_crawled/data_final_pro_2_crawl_an_uong_1_20.csv'
-"""
-
-from tabnanny import check
 import time
 import random
 import csv
 import os
-from Var import *
+from var import *
 from time import sleep
 from tqdm import tqdm
 from dotenv import load_dotenv
@@ -36,8 +22,9 @@ review_list = []
 bug_list = []
 # number_pass = round((NUM_ITEM-65)/12)
 
-load_dotenv()
-PASS = os.getenv('PASS')
+# #using if you save PASS in .env
+# load_dotenv()
+# PASS = os.getenv('PASS')
 
 
 options = webdriver.ChromeOptions()
@@ -151,13 +138,14 @@ for i in  range(PAGE_START, NUM_ITEM+1):
 
         new_handle = handles[1] 
         driver.switch_to.window(new_handle)
-
         #Get number of review
         try:
             number_cmt = driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/section/div/div/div/div[1]/div/div[2]/div[3]/div/div/div[4]/div/div[2]/div[2]")
             number_cmt = int(number_cmt.text)
         except:
+            url_bug = driver.current_url
             print("---------!Item have no standard!---------")
+            bug_list.append([i,url_bug])
             driver.close()
             driver.switch_to.window(handles[0])
             sleep(random.randint(2,3))
@@ -176,7 +164,6 @@ for i in  range(PAGE_START, NUM_ITEM+1):
         if check_condition:
             for txt in LIST_TEXT_CHECK:
                 if txt in txt_check:
-                    print(txt)
                     print("---------!Item in checklist!---------")
                     driver.close()
                     driver.switch_to.window(handles[0])
