@@ -1,3 +1,7 @@
+""" Created by Cyouisme """
+# 08/20/2022
+# -*-encoding:utf-8-*-
+
 import time
 import random
 import csv

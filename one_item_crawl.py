@@ -1,7 +1,11 @@
+""" Created by Cyouisme """
+# 08/20/2022
+# -*-encoding:utf-8-*-
+
 """
 Create variables in Var.py before run code
 
-EMAIL = "hbcqb2k@gmail.com"
+EMAIL = ""
 PASS = ""
 NUM_ITEM = 20
 NUM_FIRST_PAGE = 37

@@ -2,11 +2,12 @@
 ## Hi 👋, I'm Cyouisme
 
 ## Description
-A tool crawl from Foody by Selenium. This tool was applied in Challenge 2 of Quy Nhon AI Hackathon 2022.
+A tool crawl reviews from Foody by Selenium. This tool was applied in Challenge 2 of Quy Nhon AI Hackathon 2022.
 
 ### Setup environment
 - Install [Python](https://www.python.org/downloads/) version 3.9. or higher
 - Chrome brower required
+- Have a account in [Foody](https://www.foody.vn/)
 
 ### Installation
 
@@ -27,7 +28,7 @@ $ python crawl_data.py
 [GB5](http://greenbig5.herokuapp.com/) -->
 
 ## Contact me
-If this tool is useful for you, please click Star in the top right of this repository. And if you have any questions please contact me at:
+If this tool is useful for you, please click `Star` in the top right of this repository. And if you have any questions please contact me at
 Gmail: `baochunga1@gmail.com`
 
 ## License

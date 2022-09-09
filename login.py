@@ -1,3 +1,7 @@
+""" Created by Cyouisme """
+# 08/20/2022
+# -*-encoding:utf-8-*-
+
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By

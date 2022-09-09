@@ -1,3 +1,7 @@
+""" Created by Cyouisme """
+# 08/20/2022
+# -*-encoding:utf-8-*-
+
 import pandas as pd
 
 file = pd.read_csv("data_final_pro_2_crawl_nha_hang_500.csv")
